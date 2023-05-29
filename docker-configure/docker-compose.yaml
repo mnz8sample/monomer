@@ -1,0 +1,26 @@
+name: monomer
+
+version: '3.7'
+
+networks:
+    monomer-net:
+
+volumes:
+    monomer-user-data:
+        name: monomer-user-volume
+
+services:
+    monomer-user-database:
+        image: postgres:9.6
+        container_name: monomer-user-postgres
+        restart: on-failure
+        networks:
+            - monomer-net
+        volumes:
+            - monomer-user-data:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_USER=monomer-user
+            - POSTGRES_PASSWORD=monomer-password
+            - POSTGRES_DB=monomer-db
+        ports:
+            - '5432:5432'
