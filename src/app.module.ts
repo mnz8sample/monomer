@@ -1,9 +1,7 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { PokemonModule } from './managers/pokemon/pokemon.module';
 
 @Module({
@@ -12,20 +10,31 @@ import { PokemonModule } from './managers/pokemon/pokemon.module';
             driver: ApolloDriver,
             autoSchemaFile: true,
         }),
+        // TypeOrmModule.forRoot({
+        //     type: 'postgres',
+        //     host: 'localhost',
+        //     port: 5432,
+        //     username: 'postgres-user',
+        //     password: 'postgres-password',
+        //     database: 'postgres-db',
+        //     entities: ['dist/**/*.entity.js'],
+        //     synchronize: true,
+        //     logging: true,
+        // }),
         TypeOrmModule.forRoot({
-            type: 'postgres',
+            type: 'mysql',
             host: 'localhost',
-            port: 5432,
-            username: 'monomer-user',
-            password: 'monomer-password',
-            database: 'monomer-db',
+            port: 3306,
+            username: 'mysql-user',
+            password: 'mysql-password',
+            database: 'mysql-db',
             entities: ['dist/**/*.entity.js'],
-            synchronize: true,
+            // synchronize: true,
             logging: true,
         }),
         PokemonModule,
     ],
-    controllers: [AppController],
-    providers: [AppService],
+    controllers: [],
+    providers: [],
 })
 export class AppModule {}

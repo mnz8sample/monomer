@@ -1,8 +1,8 @@
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { PokemonEntity } from './pokemon.entity';
-import { CreatePokemonDto } from './dto/create-pokemon.dto';
 import { PokemonService } from './pokemon.service';
-import { inputPokemon } from './input/pokemon.input';
+import { CreatePokemonDto } from './create-pokemon.dto';
+import { inputPokemon } from './pokemon.input';
 
 @Resolver((of) => PokemonEntity)
 export class PokemonResolver {

@@ -11,3 +11,5 @@ pnpm i @nestjs/typeorm typeorm pg
 nest g module pokemon managers
 nest g controller pokemon managers
 nest g service pokemon managers
+
+pnpm i @nestjs/typeorm typeorm mysql2
