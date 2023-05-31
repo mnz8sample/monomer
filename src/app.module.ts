@@ -29,6 +29,7 @@ import { PokemonModule } from './managers/pokemon/pokemon.module';
             password: 'mysql-password',
             database: 'mysql-db',
             entities: ['dist/**/*.entity.js'],
+            // 数据初始时打开，有数据就可以关闭了
             // synchronize: true,
             logging: true,
         }),
