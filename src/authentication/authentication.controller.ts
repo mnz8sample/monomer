@@ -1,10 +1,13 @@
 import { Controller, Body, Post, HttpCode, HttpStatus, Get, Request, UseGuards } from '@nestjs/common';
 import { AuthenticationService } from './authentication.service';
 import { AuthenticationGuard } from './authentication.guard';
+import { PublicApi } from './public-api.decorator';
 
 @Controller('ac')
 export class AuthenticationController {
     constructor(private AuthenticationService: AuthenticationService) {}
+
+    @PublicApi()
     @HttpCode(HttpStatus.OK)
     @Post('signin')
     // 理想情况 使用 DTO 类来定义请求主体

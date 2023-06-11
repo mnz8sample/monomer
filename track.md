@@ -23,3 +23,9 @@ nest g module authorization
 nest g service authentication
 nest g controller authentication
 nest g guard authentication
+
+nest g decorator public-api authentication --flat
+
+## nest cli
+
+`--flat` 不要为元素生成文件夹。
