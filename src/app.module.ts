@@ -12,7 +12,6 @@ import { UserModule } from './managers/user/user.module';
             password: 'mysql-password',
             database: 'mysql-db',
             entities: ['dist/**/*.entity.js'],
-            // synchronize: true,
             logging: true,
         }),
         UserModule,

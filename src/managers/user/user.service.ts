@@ -10,10 +10,14 @@ export class UserService {
 
     create(params: UserDto) {
         const user = new UserEntity();
-        user.name = params.name;
+        user.account = params.account;
         user.password = params.password;
 
         return this.UserRepository.save(user);
+    }
+
+    async update() {
+        // to
     }
 
     async list(): Promise<UserEntity[]> {
@@ -26,9 +30,5 @@ export class UserService {
 
     async deleteBatch(ids: number[]) {
         // return await this.UserRepository.
-    }
-
-    async update() {
-        // to
     }
 }

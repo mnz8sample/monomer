@@ -1,8 +1,8 @@
 export class UserDto {
     id?: number;
-    name: string;
+    account: string;
     password: string;
-    create_time: string;
+    create_time: number;
     delete_flag: number;
     status: number;
     update_by: string;

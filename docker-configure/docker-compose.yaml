@@ -12,20 +12,20 @@ volumes:
         name: monomer-mysql-volume
 
 services:
-    monomer-postgres:
-        image: postgres:9.6
-        container_name: user-data
-        restart: on-failure
-        networks:
-            - monomer-net
-        volumes:
-            - monomer-postgres-data:/var/lib/postgresql/data
-        environment:
-            - POSTGRES_USER=postgres-user
-            - POSTGRES_PASSWORD=postgres-password
-            - POSTGRES_DB=postgres-db
-        ports:
-            - '5432:5432'
+    # monomer-postgres:
+    #     image: postgres:9.6
+    #     container_name: postgres-data
+    #     restart: on-failure
+    #     networks:
+    #         - monomer-net
+    #     volumes:
+    #         - monomer-postgres-data:/var/lib/postgresql/data
+    #     environment:
+    #         - POSTGRES_USER=postgres-user
+    #         - POSTGRES_PASSWORD=postgres-password
+    #         - POSTGRES_DB=postgres-db
+    #     ports:
+    #         - '5432:5432'
 
     monomer-mysql:
         image: mysql:5.7
