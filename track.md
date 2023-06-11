@@ -14,3 +14,12 @@ nest g controller user managers
 
 nest g itc success global
 nest g f failure global
+
+pnpm i @nestjs/jwt
+
+nest g module authentication
+nest g module authorization
+
+nest g service authentication
+nest g controller authentication
+nest g guard authentication

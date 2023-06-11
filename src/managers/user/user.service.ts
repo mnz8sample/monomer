@@ -24,6 +24,10 @@ export class UserService {
         return await this.UserRepository.find();
     }
 
+    async detail(account: string): Promise<UserEntity> {
+        return await this.UserRepository.findOneBy({ account });
+    }
+
     async delete(id: number): Promise<DeleteResult> {
         return await this.UserRepository.delete(id);
     }
