@@ -1,23 +1,28 @@
-import { Controller, Body, Post, HttpCode, HttpStatus, Get, Request, UseGuards } from '@nestjs/common';
+import { Controller, Body, Post, HttpCode, HttpStatus, Get, Request } from '@nestjs/common';
 import { AuthenticationService } from './authentication.service';
-import { AuthenticationGuard } from './authentication.guard';
-import { PublicApi } from './public-api.decorator';
+import { UserDto } from '../managers/user/user.dto';
 
 @Controller('ac')
 export class AuthenticationController {
     constructor(private AuthenticationService: AuthenticationService) {}
 
-    @PublicApi()
     @HttpCode(HttpStatus.OK)
-    @Post('signin')
+    @Post('sign-up')
     // 理想情况 使用 DTO 类来定义请求主体
-    signIn(@Body() signInDto: Record<string, any>) {
+    sign_up(@Body() signUpDto: UserDto) {
+        return this.AuthenticationService.signUp(signUpDto);
+    }
+
+    @HttpCode(HttpStatus.OK)
+    @Post('sign-in')
+    // 理想情况 使用 DTO 类来定义请求主体
+    sign_in(@Body() signInDto: UserDto) {
         return this.AuthenticationService.signIn(signInDto.account, signInDto.password);
     }
 
-    @UseGuards(AuthenticationGuard)
-    @Get('profile')
-    getProfile(@Request() req) {
-        return req.user;
+    @HttpCode(HttpStatus.OK)
+    @Post('sign-out')
+    sign_out(@Body() signOutDto: UserDto) {
+        // todo
     }
 }

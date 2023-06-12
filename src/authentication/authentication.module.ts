@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
-import { APP_GUARD } from '@nestjs/core';
 import { AuthenticationService } from './authentication.service';
 import { AuthenticationController } from './authentication.controller';
 import { jwtConstants } from './constants';
 import { UserModule } from '../managers/user/user.module';
-import { AuthenticationGuard } from './authentication.guard';
 
 @Module({
     imports: [
@@ -13,16 +11,11 @@ import { AuthenticationGuard } from './authentication.guard';
         JwtModule.register({
             global: true,
             secret: jwtConstants.secret,
-            signOptions: { expiresIn: '60s' },
+            // 方便调试，增加时间
+            signOptions: { expiresIn: '1h' },
         }),
     ],
-    providers: [
-        AuthenticationService,
-        {
-            provide: APP_GUARD,
-            useClass: AuthenticationGuard,
-        },
-    ],
+    providers: [AuthenticationService],
     controllers: [AuthenticationController],
 })
 export class AuthenticationModule {}
