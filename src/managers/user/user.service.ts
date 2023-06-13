@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, DeleteResult } from 'typeorm';
 import { UserEntity } from './user.entity';
@@ -13,7 +13,18 @@ export class UserService {
         user.account = params.account;
         user.password = params.password;
 
-        return this.UserRepository.save(user);
+        return this.UserRepository.save(user).catch((error) => {
+            throw new HttpException(
+                {
+                    status: HttpStatus.INTERNAL_SERVER_ERROR,
+                    message: error.message,
+                },
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                {
+                    cause: error,
+                },
+            );
+        });
     }
 
     async update() {
