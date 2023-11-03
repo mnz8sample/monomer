@@ -42,6 +42,10 @@ nest g guard authentication
 
 nest g decorator public-api authentication --flat
 
+### 重新调整结构
+
+`pnpm i -D -w husky lint-staged prettier eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+
 ## nest cli
 
 `--flat` 不要为元素生成文件夹。

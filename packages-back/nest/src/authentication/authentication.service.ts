@@ -5,7 +5,10 @@ import { UserDto } from '../managers/user/user.dto';
 
 @Injectable()
 export class AuthenticationService {
-    constructor(private UserService: UserService, private jwtService: JwtService) {}
+    constructor(
+        private UserService: UserService,
+        private jwtService: JwtService,
+    ) {}
 
     signUp(params: UserDto) {
         return this.UserService.create(params);

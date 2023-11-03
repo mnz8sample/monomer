@@ -7,7 +7,10 @@ import { Request } from 'express';
 
 @Injectable()
 export class AuthenticationGuard implements CanActivate {
-    constructor(private jwtService: JwtService, private reflector: Reflector) {}
+    constructor(
+        private jwtService: JwtService,
+        private reflector: Reflector,
+    ) {}
 
     canActivate2(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
         return true;
