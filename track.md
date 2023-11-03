@@ -1,13 +1,25 @@
-### alpha
-
-nest n -s -p pnpm monomer
-ncu -i
-add monomer.drawio.svg .editorconfig
-
-### docker
+## docker
 
 add docker-configure\docker-compose.yaml
 docker-compose up -d
+
+## react-vite
+
+### 路由
+
+react-dom react-router-dom
+
+### 请求
+
+axios
+
+### 状态管理
+
+### 权限
+
+### 国际化
+
+## nest
 
 ### typeorm mysql2
 
@@ -42,10 +54,10 @@ nest g guard authentication
 
 nest g decorator public-api authentication --flat
 
-### 重新调整结构
-
-`pnpm i -D -w husky lint-staged prettier eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser`
-
 ## nest cli
 
 `--flat` 不要为元素生成文件夹。
+
+## 重新调整结构
+
+`pnpm i -D -w husky lint-staged prettier eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser`
