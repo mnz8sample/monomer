@@ -1,0 +1,27 @@
+.sign-in-container {
+    background: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .sign-in-content {
+        padding-top: 200px;
+        .sign-in-main {
+            margin: 0 auto;
+            width: 328px;
+            :global {
+                .login-form {
+                    max-width: 300px;
+                }
+                .login-form-forgot {
+                    float: right;
+                }
+                .ant-col-rtl .login-form-forgot {
+                    float: left;
+                }
+                .login-form-button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
