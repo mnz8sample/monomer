@@ -1,3 +1,3 @@
 export default () => {
-    return <>sign up</>;
+  return <>sign up</>;
 };

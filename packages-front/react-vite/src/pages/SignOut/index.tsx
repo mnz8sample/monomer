@@ -1,3 +1,3 @@
 export default () => {
-    return <>SignOut</>;
+  return <>SignOut</>;
 };

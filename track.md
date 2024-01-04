@@ -1,69 +1,67 @@
-## docker
-
-add docker-configure\docker-compose.yaml
-docker-compose up -d
-
-## react-vite
-
-### 路由
-
-react-dom react-router-dom
-
-### 请求
-
-axios
-
-### 状态管理
-
-react-redux
-
-### CSS 预处理器
-
-sass
-
-### 权限
-
-### 国际化
-
-## nest
-
-### typeorm mysql2
-
-pnpm i @nestjs/typeorm typeorm mysql2
-
-### manager user
-
-nest g module user managers
-create user.entity.ts user.dto.ts
-nest g service user managers
-nest g controller user managers
-
-### 统一接口返回
-
-nest g itc success global
-nest g f failure global
-
-### 认证与授权
-
-pnpm i @nestjs/jwt
-
-nest g module authentication
-nest g module authorization
-
-### 认证
-
-nest g service authentication
-nest g controller authentication
-nest g guard authentication
-
-### 全局身份验证
-
-nest g decorator public-api authentication --flat
+[TOC]
 
 ## nest cli
 
 `--flat` 不要为元素生成文件夹。
 
+## docker
+
+add docker-configure\docker-compose.yaml
+
+docker-compose up -d
+
+## 用户
+
+nest g module userByMonomer
+
+nest g service userByMonomer
+
+nest g controller userByMonomer
+
+pnpm i @nestjs/typeorm typeorm mysql2
+
+create user-by-monomer.entity.ts user-by-monomer.dto.ts
+
+### 接口的统一返回
+
+nest g itc success global-setting --flat
+
+nest g f failure global-setting --flat
+
+## 认证(authentication)
+
+- identify by monomer
+
+  nest g module identifyMonomer
+
+  nest g service identifyMonomer
+
+  nest g controller identifyMonomer
+
+## 全局身份验证
+
+nest g decorator public-api authentication --flat
+
+## 授权(authorization)
+
+nest g module authorize
+
 ## 重新调整结构
 
 `pnpm i -D -w husky lint-staged prettier eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+
+redux
+
+redux-saga
+
+redux-thunk
+
+zustand
+
+### 认证 登录
+
+保持登录状态 sessionId token jwt(JSON Web Token)
+
+权限管理
+
+### token redis

@@ -1,44 +1,57 @@
 name: monomer
 
-version: '3.7'
+version: "3.7"
 
 networks:
-    monomer-net:
+  monomer-net:
 
 volumes:
-    monomer-postgres-data:
-        name: monomer-postgres-volume
-    monomer-mysql-data:
-        name: monomer-mysql-volume
+  monomer-postgres-data:
+    name: monomer-postgres-volume
+  monomer-mysql-data:
+    name: monomer-mysql-volume
+  monomer-redis-data:
+    name: monomer-redis-volume
 
 services:
-    # monomer-postgres:
-    #     image: postgres:9.6
-    #     container_name: postgres-data
-    #     restart: on-failure
-    #     networks:
-    #         - monomer-net
-    #     volumes:
-    #         - monomer-postgres-data:/var/lib/postgresql/data
-    #     environment:
-    #         - POSTGRES_USER=postgres-user
-    #         - POSTGRES_PASSWORD=postgres-password
-    #         - POSTGRES_DB=postgres-db
-    #     ports:
-    #         - '5432:5432'
+  # monomer-postgres:
+  #     image: postgres:9.6
+  #     container_name: postgres-data
+  #     restart: on-failure
+  #     networks:
+  #         - monomer-net
+  #     volumes:
+  #         - monomer-postgres-data:/var/lib/postgresql/data
+  #     environment:
+  #         - POSTGRES_USER=postgres-user
+  #         - POSTGRES_PASSWORD=postgres-password
+  #         - POSTGRES_DB=postgres-db
+  #     ports:
+  #         - '5432:5432'
 
-    monomer-mysql:
-        image: mysql:5.7
-        container_name: mysql-data
-        restart: on-failure
-        networks:
-            - monomer-net
-        volumes:
-            - monomer-mysql-data:/var/lib/mysql
-        environment:
-            - MYSQL_ROOT_PASSWORD=mysql-root-password
-            - MYSQL_USER=mysql-user
-            - MYSQL_PASSWORD=mysql-password
-            - MYSQL_DATABASE=mysql-db
-        ports:
-            - '3306:3306'
+  monomer-mysql:
+    image: mysql:5.7
+    container_name: mysql-data
+    restart: on-failure
+    networks:
+      - monomer-net
+    volumes:
+      - monomer-mysql-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql-root-password
+      - MYSQL_USER=mysql-user
+      - MYSQL_PASSWORD=mysql-password
+      - MYSQL_DATABASE=mysql-db
+    ports:
+      - "3306:3306"
+
+  monomer-redis:
+    image: redis:latest
+    container_name: redis-data
+    restart: on-failure
+    networks:
+      - monomer-net
+    volumes:
+      - monomer-redis-data:/var/lib/redis
+    ports:
+      - "6379:6379"

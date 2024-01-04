@@ -1,7 +1,27 @@
-redux
+## 系统类型
 
-redux-saga
+1.管理类
 
-redux-thunk
+2.交易类
 
-zustand
+3.信息媒体 (文字 图片 视频 音频)
+
+4.社交 (聊天 社区 直播)
+
+## 平台支持
+
+web
+
+mobile: android ios mini-program
+
+desktop: windows macos linux
+
+embedded
+
+## placeholder
+
+account
+
+manage
+
+trade

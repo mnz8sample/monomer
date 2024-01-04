@@ -17,3 +17,9 @@ quote_type = single
 
 [*.{jsx,tsx}]
 max_line_length = 160
+
+[*.{js,ts,jsx,tsx,md,yaml}]
+indent_size = 2
+
+[pnpm-lock.yaml]
+indent_size = 4

@@ -1,4 +1,4 @@
-create table user (
+create table monomer_account_table (
     `id` bigint AUTO_INCREMENT comment '编号' PRIMARY KEY,
     `account` varchar(50) NOT NULL comment '账号',
     `password` varchar(100) NOT NULL comment '密码',
@@ -11,4 +11,4 @@ create table user (
     `avatar` varchar(150) null comment '头像',
     `email` varchar(100) null comment '邮箱',
     constraint account unique (account)
-) comment '用户';
+) comment 'monomer account table';
