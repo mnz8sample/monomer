@@ -24,6 +24,29 @@ $ ng new angular --skip-git --skip-install
 ? Which stylesheet format would you like to use? SCSS   [ https://sass-lang.com/documentation/syntax#scss                ]
 ```
 
+## flutter
+
+`flutter create --platforms=android,web flutter_monomer`
+
+```
+Creating project flutter_monomer...
+Resolving dependencies in flutter_monomer... (1.6s)
+Got dependencies in flutter_monomer.
+Wrote 42 files.
+
+All done!
+You can find general documentation for Flutter at: https://docs.flutter.dev/
+Detailed API documentation is available at: https://api.flutter.dev/
+If you prefer video documentation, consider: https://www.youtube.com/c/flutterdev
+
+In order to run your application, type:
+
+  $ cd flutter_monomer
+  $ flutter run
+
+Your application code is in flutter_monomer\lib\main.dart.
+```
+
 ## taro
 
 `pnpm dlx @tarojs/cli init taro`
