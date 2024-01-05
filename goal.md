@@ -10,13 +10,27 @@
 
 ## 平台支持
 
-web
+- web
 
-mobile: android ios mini-program
+- mobile
 
-desktop: windows macos linux
+  - android
+  - ios
+  - mini-program
 
-embedded
+- desktop
+
+  - windows
+  - macos
+  - linux
+
+- embedded
+
+web: nest react vue angular
+
+android: flutter
+
+mini-program: taro
 
 ## placeholder
 
