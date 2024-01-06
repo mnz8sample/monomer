@@ -18,3 +18,11 @@ samples, guidance on mobile development, and a full API reference.
 ## 启动
 
 flutter run
+
+### android
+
+`flutter doctor --android-licenses`
+
+[Start building Flutter Android apps on Windows](https://docs.flutter.dev/get-started/install/windows/mobile)
+
+select a android device
