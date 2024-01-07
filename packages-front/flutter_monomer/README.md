@@ -26,3 +26,9 @@ flutter run
 [Start building Flutter Android apps on Windows](https://docs.flutter.dev/get-started/install/windows/mobile)
 
 select a android device
+
+#### gradle 下载引起报错
+
+手动下载 `distributionUrl=https\://services.gradle.org/distributions/gradle-7.5-all.zip`
+
+`android\gradle\wrapper\gradle-wrapper.properties` 修改 `distributionUrl=file\:/D:/zone/gradle-7.5-all.zip`
