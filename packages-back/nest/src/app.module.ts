@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AccountMonomerModule } from './account-monomer/account-monomer.module';
-import { IdentifyMonomerModule } from './identify-monomer/identify-monomer.module';
+import { AccountMonomerModule } from './m-account/account-monomer.module';
+import { IdentifyMonomerModule } from './m-identify/identify.module';
+import { ProductModule } from './m-product/product.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { IdentifyMonomerModule } from './identify-monomer/identify-monomer.modul
     }),
     AccountMonomerModule,
     IdentifyMonomerModule,
+    ProductModule,
   ],
   controllers: [],
 })
