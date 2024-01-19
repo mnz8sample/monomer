@@ -1,7 +1,17 @@
+## react
+
+```
+$ pnpm create vite
+
+√ Select a framework: » React
+√ Select a variant: » TypeScript
+```
+
 ## vue
 
 `pnpm create vue@latest`
 
+```
 Vue.js - The Progressive JavaScript Framework
 
 √ Project name: ... vue
@@ -13,6 +23,7 @@ Vue.js - The Progressive JavaScript Framework
 √ Add an End-to-End Testing Solution? » Playwright
 √ Add ESLint for code quality? ... No / Yes
 √ Add Prettier for code formatting? ... No / Yes
+```
 
 ## angular
 
@@ -51,6 +62,7 @@ Your application code is in flutter_monomer\lib\main.dart.
 
 `pnpm dlx @tarojs/cli init taro`
 
+```
 Taro 即将创建一个新项目!
 Need help? Go and open issue: https://tls.jd.com/taro-issue-helper
 
@@ -59,5 +71,6 @@ Need help? Go and open issue: https://tls.jd.com/taro-issue-helper
 ? 是否需要使用 TypeScript ？ Yes
 ? 请选择 CSS 预处理器（Sass/Less/Stylus） Sass
 ? 请选择编译工具 Webpack5
-? 请选择包管理工具 pnpm  
+? 请选择包管理工具 pnpm
 ? 请选择模板源 CLI 内置默认模板
+```
