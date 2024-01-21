@@ -10,7 +10,7 @@ async function bootstrap() {
   app.useGlobalInterceptors(new SuccessInterceptor());
   app.useGlobalFilters(new FailureFilter());
 
-  await app.listen(3000);
+  await app.listen(50001);
   console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();

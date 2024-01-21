@@ -1,6 +1,10 @@
 <template>
   <a-table :dataSource="tableData" :columns="columns">
-    <el-table-column prop="name" label="Name" width="180" />
+    <template #headerCell="{ column }">
+      <template v-if="column.key === 'name'">
+        <span> Name </span>
+      </template>
+    </template>
   </a-table>
 </template>
 

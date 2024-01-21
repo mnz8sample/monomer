@@ -7,10 +7,11 @@ export default defineConfig({
   server: {
     proxy: {
       '/v1': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:50001',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/v1/, ''),
       },
     },
+    port: 40001,
   },
 });
