@@ -74,3 +74,5 @@ Need help? Go and open issue: https://tls.jd.com/taro-issue-helper
 ? 请选择包管理工具 pnpm
 ? 请选择模板源 CLI 内置默认模板
 ```
+
+## rename package.json
