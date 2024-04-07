@@ -2,6 +2,8 @@ monomer-major
 
 ## 系统类型
 
+diversity
+
 1.管理类
 
 2.交易类

@@ -76,3 +76,5 @@ Need help? Go and open issue: https://tls.jd.com/taro-issue-helper
 ```
 
 ## rename package.json
+
+统一对名字进行修改, react vue angular taro
